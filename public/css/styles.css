@@ -1,0 +1,88 @@
+body {
+  font-size: 80%;
+  font-family: helvetica;
+}
+
+.clear {
+  clear: both;
+}
+
+div,ul,li {
+  margin: 0; padding: 0;
+}
+
+h1.main {
+  color: red;
+}
+
+h2 {
+  margin: 0.25em 0;
+}
+
+#container {
+  clear: both;
+}
+
+.draggable {
+  cursor: move;
+}
+
+ul#available, ul#selected {
+  font-size: 80%;
+}
+
+ul#available>li, ul#selected>li {
+  background-color: #eee;
+  list-style: none;
+  float: left;
+  border: 1px solid #bbb;
+  margin: 0.5em;
+  padding: 0.5em;
+  width: 10em;
+  height: 14em;
+}
+
+ul#available {
+  background-color: #9B9;
+  border: 1px solid #BBB;
+  height: 55em;
+}
+
+ul#available.highlight {
+  background-color: #696;
+}
+
+ul#selected {
+  background-color: #99B;
+  border: 1px solid #BBB;
+  height: 40em;
+}
+
+ul#selected.highlight {
+  background-color: #669;
+}
+
+ul.party {
+  margin: 0;
+  list-style: none;
+}
+
+li.picture {
+  font-weight: bold;
+}
+
+li.picture>img {
+  width: 70px;
+  height: 70px;
+}
+
+li.name {
+  font-weight: bold;
+}
+
+form#update-form {
+  margin: 1em 0;
+}
+label {
+  font-weight: bold;
+}
