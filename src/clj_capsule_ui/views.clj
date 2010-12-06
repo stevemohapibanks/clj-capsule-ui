@@ -43,30 +43,3 @@
             update-form]]
             
         [:div {:class "clear"}]]]))
-
-(defmulti render-party :type)
-
-(defmethod render-party "person" [person]
-  [:li
-    [:ul {:class "person"}
-      [:li {:class "picture"}
-        [:img {:src (:pictureURL person)}]]
-      [:li {:class "name"} (str (:firstName person) " " (:lastName person))]
-      (if-let [org (:organisationName person)]
-        [:li {:class "organisation"} org])]])
-      
-(defmethod render-party "organisation" [org]
-  [:li
-    [:ul {:class "organisation"}
-      [:li {:class "picture"}
-        [:img {:src (:pictureURL org)}]]
-      [:li {:class "name"} (:name org)]]])
-        
-(defn render-results [parties]
-  (with-layout
-    [:h1 "Search results"]
-    [:h2 {:class "clear"} "People"]
-    [:ul {:class "contacts"} (map render-party (filter #(= (:type %) "person") parties))]
-    [:h2 {:class "clear"} "Organisations"]
-    [:ul {:class "contacts"} (map render-party (filter #(= (:type %) "organisation") parties))]))
-          
